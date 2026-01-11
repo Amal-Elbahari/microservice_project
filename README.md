@@ -1,4 +1,4 @@
-# 🏗️ Projet MSA - Système de Gestion d'Emprunts de Livres
+#  Projet MSA - Système de Gestion d'Emprunts de Livres
 
 **Étudiant :** Amal Elbahari  
 **Date :** Janvier 2026  
@@ -517,10 +517,10 @@ Ce projet est réalisé dans un cadre académique pour le cours MSA 2026.
 
 ---
 
-## 🙏 Remerciements
+##  Remerciements
 
 Merci au professeur pour les enseignements sur l'architecture microservices et les bonnes pratiques de développement distribué.
 
 ---
 
-**🎉 Projet réalisé avec succès !**
+** Projet réalisé avec succès !**
