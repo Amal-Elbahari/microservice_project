@@ -6,13 +6,13 @@
 
 ---
 
-## 📌 Description du Projet
+##  Description du Projet
 
 Application de gestion d'emprunts de livres construite avec une **architecture microservices**, respectant les principes de séparation des responsabilités et de communication asynchrone. Le système permet de gérer des utilisateurs, des livres et des emprunts avec notifications en temps réel via Kafka.
 
 ---
 
-## 🎯 Objectifs Réalisés
+##  Objectifs Réalisés
 
 ✅ Architecture microservices avec **6 services** indépendants  
 ✅ Base de données MySQL séparée par service (**Database per Service**)  
@@ -24,7 +24,7 @@ Application de gestion d'emprunts de livres construite avec une **architecture m
 
 ---
 
-## 🏗️ Architecture du Système
+##  Architecture du Système
 
 ### Vue d'ensemble
 ```
@@ -78,7 +78,7 @@ Application de gestion d'emprunts de livres construite avec une **architecture m
 
 ---
 
-## 🔄 Flux de Fonctionnement
+## Flux de Fonctionnement
 
 ### Création d'un Emprunt
 ```
@@ -101,7 +101,7 @@ Application de gestion d'emprunts de livres construite avec une **architecture m
 
 ---
 
-## 📊 Modèle de Données
+##  Modèle de Données
 
 ### User (db_user)
 ```sql
@@ -146,7 +146,7 @@ CREATE TABLE emprunts (
 
 ---
 
-## 🚀 Installation et Démarrage
+##  Installation et Démarrage
 
 ### Prérequis
 
@@ -206,7 +206,7 @@ docker-compose down -v
 
 ---
 
-## 🧪 Tests et Utilisation
+##  Tests et Utilisation
 
 ### 1. Créer un Utilisateur
 ```bash
@@ -266,17 +266,17 @@ docker logs -f notification-service
 
 **Logs attendus :**
 ```
-📨 Événement Kafka reçu: EmpruntEvent(empruntId=1, userId=1, bookId=1, ...)
+ Événement Kafka reçu: EmpruntEvent(empruntId=1, userId=1, bookId=1, ...)
 ============================================================
-🔔 NOTIFICATION - NOUVEL EMPRUNT CRÉÉ
+ NOTIFICATION - NOUVEL EMPRUNT CRÉÉ
 ============================================================
-📌 ID Emprunt    : 1
-👤 ID Utilisateur: 1
-📚 ID Livre      : 1
-📅 Date          : 2026-01-11T12:00:00
-🏷️  Type          : EMPRUNT_CREATED
+ ID Emprunt    : 1
+ ID Utilisateur: 1
+ ID Livre      : 1
+ Date          : 2026-01-11T12:00:00
+  Type          : EMPRUNT_CREATED
 ============================================================
-✅ Notification envoyée avec succès!
+ Notification envoyée avec succès!
 ```
 
 ### 5. Lister Tous les Emprunts
@@ -311,7 +311,7 @@ curl http://localhost:8085/api/emprunts
 
 ---
 
-## 🗄️ Accès aux Bases de Données
+##  Accès aux Bases de Données
 
 ### Se Connecter à MySQL
 ```bash
@@ -388,7 +388,7 @@ microservicesapp/
 
 ---
 
-## 🛠️ Technologies Utilisées
+##  Technologies Utilisées
 
 ### Backend
 
@@ -416,7 +416,7 @@ microservicesapp/
 
 ---
 
-## 🎯 Principes Architecturaux Appliqués
+##  Principes Architecturaux Appliqués
 
 ### 1. Database per Service
 Chaque microservice possède sa propre base de données, garantissant l'indépendance et l'isolation des données.
@@ -435,7 +435,7 @@ Architecture préparée pour l'ajout de patterns de résilience (Hystrix, Resili
 
 ---
 
-## 🐛 Dépannage
+##  Dépannage
 
 ### Les Services ne Démarrent Pas
 ```bash
@@ -480,7 +480,7 @@ docker-compose restart mysql-db
 
 ---
 
-## 📈 Améliorations Futures
+##  Améliorations Futures
 
 - [ ] Ajouter Spring Security pour l'authentification
 - [ ] Implémenter Circuit Breaker (Resilience4j)
@@ -495,22 +495,22 @@ docker-compose restart mysql-db
 
 ---
 
-## 📄 Licence
+##  Licence
 
 Ce projet est réalisé dans un cadre académique pour le cours MSA 2026.
 
 ---
 
-## 👤 Auteur
+##  Auteur
 
 **Amal Elbahari**  
 Étudiant en data & software    
-📧 Contact: amal.elbahari@gmail.com 
+ Contact: amal.elbahari@gmail.com 
 🔗 GitHub: https://github.com/Amal-Elbahari
 
 ---
 
-## 📝 Notes de Rendu
+##  Notes de Rendu
 
 - **Lien GitLab/GitHub :** https://github.com/Amal-Elbahari/microservice_project
 - **Status :** ✅ Projet complet et fonctionnel
