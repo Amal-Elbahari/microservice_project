@@ -1,0 +1,63 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: gateway-service
+  
+  cloud:
+    discovery:
+      enabled: true
+    
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      
+      routes:
+        - id: book-service
+          uri: lb://book-service
+          predicates:
+            - Path=/api/books/**
+          filters:
+            - StripPrefix=0
+        
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/users/**
+          filters:
+            - StripPrefix=0
+        
+        - id: emprunter-service
+          uri: lb://emprunter-service
+          predicates:
+            - Path=/emprunts/**
+          filters:
+            - StripPrefix=0
+      
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    hostname: gateway-service
+
+# Logging pour debug
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    com.netflix.eureka: DEBUG
+    com.netflix.discovery: DEBUG
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway

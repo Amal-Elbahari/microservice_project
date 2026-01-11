@@ -1,0 +1,4 @@
+com\example\notificationservice\service\NotificationService.class
+com\example\notificationservice\dto\EmpruntEvent.class
+com\example\notificationservice\NotificationServiceApplication.class
+com\example\notificationservice\kafka\EmpruntConsumer.class
